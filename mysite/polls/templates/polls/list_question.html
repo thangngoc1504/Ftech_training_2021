@@ -1,0 +1,10 @@
+{% extends 'polls/base.html' %}
+{% block content %}
+    {% if dsquest %}
+        {% for i in dsquest %}
+            <a href="{% url 'detail' i.id %}"><p>{{ i.question_text }}</p></a>
+        {% endfor %}
+    {% else %}
+        <h3 style="color: red" >Khong co du lieu</h3>
+    {% endif %}
+{% endblock %}

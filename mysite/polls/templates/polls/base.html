@@ -1,0 +1,28 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Django</title>
+    <link rel="stylesheet" href="{% static 'polls/style.css' %}">
+</head>
+<body>
+    <div class="header">
+        <h1>My website</h1>
+    </div>
+    <div class="menu">
+        <ul>
+            <li>Link 1</li>
+            <li>Link 2</li>
+            <li>Link 4</li>
+            <li>Link 5</li>
+            <li>Link 6</li>
+            <li>Link 7</li>
+
+        </ul>
+
+    </div>
+
+{% block content %}
+{% endblock %}
+</body>
+</html>
