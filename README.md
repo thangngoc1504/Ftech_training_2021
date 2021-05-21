@@ -58,15 +58,15 @@
         + template: Tên của mẫu để sử dụng khi hiển thị các điều khiển phân trang trong API có thể duyệt. Có thể được ghi đè để sửa đổi kiểu kết xuất hoặc đặt thành None tắt hoàn toàn các điều khiển phân trang HTML. Mặc định là "rest_framework/pagination/numbers.html".
 
    + View:
-        GenericViewset: có sẵn các hàm 
+     GenericViewset: có sẵn các hàm 
          + queryset
          + serializer_class
-        ModelViewset: 
+     ModelViewset: 
          + kế thừa từ các lớp mixin và GenericViewset do đó cũng phải cung cấp thêm hai biến trên
          + create(), retrieve(), update()_cập nhật tất cả,partial_update()_cập nhật một phần, destroy(), list()
 
-        Router:
-            + router.register() -> include(router.url)
+   + Router:
+         + router.register() -> include(router.url)
 
 
 
