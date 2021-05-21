@@ -85,7 +85,7 @@
         + default
         + query_partition_clause : PARTITION BY ? : chia thành các nhóm 
         + order_by_clause : ORDER BY ? : xác định thứ tự trong mỗi phân vùng
-            + sắp xếp trước ->lấy bản ghi trước đó
+        + sắp xếp trước ->lấy bản ghi trước đó
         +Lead : Lấy dòng sau
 
     + Case
