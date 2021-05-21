@@ -49,24 +49,24 @@
 
 
 PageNumberPagination
-+cấu hình trong setting hoặc gọi trong class pagination_class
-+page_size:  kích thước trang. Nếu được đặt, ghi đè PAGE_SIZE cài đặt. Mặc định có cùng giá trị với PAGE_SIZE khóa cài đặt.
-+page_query_param: Giá trị chuỗi cho biết tên của tham số truy vấn để sử dụng cho điều khiển phân trang.
-+page_size_query_param: Nếu được đặt, đây là giá trị chuỗi cho biết tên của tham số truy vấn cho phép khách hàng đặt kích thước trang trên cơ sở mỗi yêu cầu. Mặc định là None, cho biết rằng máy khách có thể không kiểm soát kích thước trang được yêu cầu.
-+max_page_size: Nếu được đặt, đây là giá trị số cho biết kích thước trang được yêu cầu tối đa cho phép. Thuộc tính này chỉ hợp lệ nếu page_size_query_paramcũng được đặt.
-+last_page_strings: Một danh sách hoặc nhiều giá trị chuỗi cho biết các giá trị có thể được sử dụng với page_query_param để yêu cầu trang cuối cùng trong tập hợp. Mặc định là('last',)
-+template: Tên của mẫu để sử dụng khi hiển thị các điều khiển phân trang trong API có thể duyệt. Có thể được ghi đè để sửa đổi kiểu kết xuất hoặc đặt thành None tắt hoàn toàn các điều khiển phân trang HTML. Mặc định là "rest_framework/pagination/numbers.html".
+    +cấu hình trong setting hoặc gọi trong class pagination_class
+    +page_size:  kích thước trang. Nếu được đặt, ghi đè PAGE_SIZE cài đặt. Mặc định có cùng giá trị với PAGE_SIZE khóa cài đặt.
+    +page_query_param: Giá trị chuỗi cho biết tên của tham số truy vấn để sử dụng cho điều khiển phân trang.
+    +page_size_query_param: Nếu được đặt, đây là giá trị chuỗi cho biết tên của tham số truy vấn cho phép khách hàng đặt kích thước trang trên cơ sở mỗi yêu cầu. Mặc định là None, cho biết rằng máy khách có thể không kiểm soát kích thước trang được yêu cầu.
+    +max_page_size: Nếu được đặt, đây là giá trị số cho biết kích thước trang được yêu cầu tối đa cho phép. Thuộc tính này chỉ hợp lệ nếu page_size_query_paramcũng được đặt.
+    +last_page_strings: Một danh sách hoặc nhiều giá trị chuỗi cho biết các giá trị có thể được sử dụng với page_query_param để yêu cầu trang cuối cùng trong tập hợp. Mặc định là('last',)
+    +template: Tên của mẫu để sử dụng khi hiển thị các điều khiển phân trang trong API có thể duyệt. Có thể được ghi đè để sửa đổi kiểu kết xuất hoặc đặt thành None tắt hoàn toàn các điều khiển phân trang HTML. Mặc định là "rest_framework/pagination/numbers.html".
 
 View:
-GenericViewset: có sẵn các hàm ...,cần ghi đè
+GenericViewset: có sẵn các hàm 
     +queryset
     +serializer_class
 ModelViewset: 
-+kế thừa từ các lớp mixin và GenericViewset do đó cũng phải cung cấp thêm hai biến trên
-+create(), retrieve(), update()_cập nhật tất cả,partial_update()_cập nhật một phần, destroy(), list()
+    +kế thừa từ các lớp mixin và GenericViewset do đó cũng phải cung cấp thêm hai biến trên
+    +create(), retrieve(), update()_cập nhật tất cả,partial_update()_cập nhật một phần, destroy(), list()
 
 Router:
-router.register() -> include(router.url)
+    router.register() -> include(router.url)
 
 
 
