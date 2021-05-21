@@ -111,8 +111,8 @@
 
 
     + Swagger:
-          + https://swagger.io/
-          + https://swagger.io/tools/swagger-codegen/
-          + https://spago.ftech.ai/swagger/
-          + drf yasg
-          + https://drf-yasg.readthedocs.io/en/stable/
+    + https://swagger.io/
+    + https://swagger.io/tools/swagger-codegen/
+    + https://spago.ftech.ai/swagger/
+    + drf yasg
+    + https://drf-yasg.readthedocs.io/en/stable/
