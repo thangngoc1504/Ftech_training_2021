@@ -106,13 +106,13 @@
                 ELSE ketqua_khac
                 END
 
-    +Có thể sử dụng trong order by và group by
+    + Có thể sử dụng trong order by và group by
 
 
 
-    Swagger:
-          +https://swagger.io/
-          +https://swagger.io/tools/swagger-codegen/
+    + Swagger:
+          + https://swagger.io/
+          + https://swagger.io/tools/swagger-codegen/
           + https://spago.ftech.ai/swagger/
           + drf yasg
           + https://drf-yasg.readthedocs.io/en/stable/
