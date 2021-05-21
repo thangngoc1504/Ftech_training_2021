@@ -50,7 +50,7 @@
 
    + PageNumberPagination
         + cấu hình trong setting hoặc gọi trong class pagination_class
-        + page_size:  kích thước trang. Nếu được đặt, ghi đè PAGE_SIZE cài đặt. Mặc định có cùng giá trị với PAGE_SIZE khóa cài đặt.
+        + page_size: kích thước trang. Nếu được đặt, ghi đè PAGE_SIZE cài đặt. Mặc định có cùng giá trị với PAGE_SIZE khóa cài đặt.
         + page_query_param: Giá trị chuỗi cho biết tên của tham số truy vấn để sử dụng cho điều khiển phân trang.
         + page_size_query_param: Nếu được đặt, đây là giá trị chuỗi cho biết tên của tham số truy vấn cho phép khách hàng đặt kích thước trang trên cơ sở mỗi yêu 	cầu. Mặc định là None, cho biết rằng máy khách có thể không kiểm soát kích thước trang được yêu cầu.
         + max_page_size: Nếu được đặt, đây là giá trị số cho biết kích thước trang được yêu cầu tối đa cho phép. Thuộc tính này chỉ hợp lệ nếu page_size_query_paramcũng được đặt.
