@@ -48,63 +48,63 @@
         + Mối quan hệ lồng ghép: trường này liên kết với một class khác
 
 
-PageNumberPagination
-    +cấu hình trong setting hoặc gọi trong class pagination_class
-    +page_size:  kích thước trang. Nếu được đặt, ghi đè PAGE_SIZE cài đặt. Mặc định có cùng giá trị với PAGE_SIZE khóa cài đặt.
-    +page_query_param: Giá trị chuỗi cho biết tên của tham số truy vấn để sử dụng cho điều khiển phân trang.
-    +page_size_query_param: Nếu được đặt, đây là giá trị chuỗi cho biết tên của tham số truy vấn cho phép khách hàng đặt kích thước trang trên cơ sở mỗi yêu cầu. Mặc định là None, cho biết rằng máy khách có thể không kiểm soát kích thước trang được yêu cầu.
-    +max_page_size: Nếu được đặt, đây là giá trị số cho biết kích thước trang được yêu cầu tối đa cho phép. Thuộc tính này chỉ hợp lệ nếu page_size_query_paramcũng được đặt.
-    +last_page_strings: Một danh sách hoặc nhiều giá trị chuỗi cho biết các giá trị có thể được sử dụng với page_query_param để yêu cầu trang cuối cùng trong tập hợp. Mặc định là('last',)
-    +template: Tên của mẫu để sử dụng khi hiển thị các điều khiển phân trang trong API có thể duyệt. Có thể được ghi đè để sửa đổi kiểu kết xuất hoặc đặt thành None tắt hoàn toàn các điều khiển phân trang HTML. Mặc định là "rest_framework/pagination/numbers.html".
+    PageNumberPagination
+        +cấu hình trong setting hoặc gọi trong class pagination_class
+        +page_size:  kích thước trang. Nếu được đặt, ghi đè PAGE_SIZE cài đặt. Mặc định có cùng giá trị với PAGE_SIZE khóa cài đặt.
+        +page_query_param: Giá trị chuỗi cho biết tên của tham số truy vấn để sử dụng cho điều khiển phân trang.
+        +page_size_query_param: Nếu được đặt, đây là giá trị chuỗi cho biết tên của tham số truy vấn cho phép khách hàng đặt kích thước trang trên cơ sở mỗi yêu cầu. Mặc định là None, cho biết rằng máy khách có thể không kiểm soát kích thước trang được yêu cầu.
+        +max_page_size: Nếu được đặt, đây là giá trị số cho biết kích thước trang được yêu cầu tối đa cho phép. Thuộc tính này chỉ hợp lệ nếu page_size_query_paramcũng được đặt.
+        +last_page_strings: Một danh sách hoặc nhiều giá trị chuỗi cho biết các giá trị có thể được sử dụng với page_query_param để yêu cầu trang cuối cùng trong tập hợp. Mặc định là('last',)
+        +template: Tên của mẫu để sử dụng khi hiển thị các điều khiển phân trang trong API có thể duyệt. Có thể được ghi đè để sửa đổi kiểu kết xuất hoặc đặt thành None tắt hoàn toàn các điều khiển phân trang HTML. Mặc định là "rest_framework/pagination/numbers.html".
 
-View:
-GenericViewset: có sẵn các hàm 
-    +queryset
-    +serializer_class
-ModelViewset: 
-    +kế thừa từ các lớp mixin và GenericViewset do đó cũng phải cung cấp thêm hai biến trên
-    +create(), retrieve(), update()_cập nhật tất cả,partial_update()_cập nhật một phần, destroy(), list()
+    View:
+        GenericViewset: có sẵn các hàm 
+            +queryset
+            +serializer_class
+        ModelViewset: 
+            +kế thừa từ các lớp mixin và GenericViewset do đó cũng phải cung cấp thêm hai biến trên
+            +create(), retrieve(), update()_cập nhật tất cả,partial_update()_cập nhật một phần, destroy(), list()
 
-Router:
-    router.register() -> include(router.url)
-
-
-
-Sql:
-Join: Select From table1 (join) table2 on ?
-    +inner: INNER JOIN : chung của hai bảng
-    + left join: LEFT [OUTER] JOIN : toàn bộ bảng 1 và một phần bảng 2 khớp với điều kiện
-    + right join : RIGHT [OUTER] JOIN : toàn bộ bảng 2
-    + full : FULL [OUTER] JOIN  : cả hai bảng 
-     -> không có thì là Null
+        Router:
+            router.register() -> include(router.url)
 
 
-+LAG ( expression [, offset [, default] ] ) OVER ( [ query_partition_clause ] order_by_clause ) : lấy dòng trước đó
-   +expression : tên cột , hoặc các biểu thức trả về một giá trị
-   +offset: bước nhảy
-   + default
-   + query_partition_clause : PARTITION BY ? : chia thành các nhóm 
-   + order_by_clause : ORDER BY ? : xác định thứ tự trong mỗi phân vùng
-       + sắp xếp trước ->lấy bản ghi trước đó
-+Lead : Lấy dòng sau
 
-+Case
-   + Simple case:so sánh một biểu thức với một bộ các biểu thức đơn giản để xác định kết quả.
-      + CASE bieuthuc_dauvao
-        WHEN bieuthuc_1 THEN ketqua_1
-        WHEN bieuthuc_2 THEN ketqua_2
-        ...
-        WHEN bieuthuc_n THEN ketqua_n
-        ELSE ketqua_khac
-        END
-   + Searched case :đánh giá một bộ các biểu thức Boolean để xác định kết quả.
-        +CASE
-         WHEN dieukien_1 THEN ketqua_1
-         WHEN dieukien_2 THEN ketqua_2
-         ...
-         WHEN dieukien_n THEN ketqua_n
-         ELSE ketqua_khac
-         END
+    Sql:
+        Join: Select From table1 (join) table2 on ?
+            +inner: INNER JOIN : chung của hai bảng
+            + left join: LEFT [OUTER] JOIN : toàn bộ bảng 1 và một phần bảng 2 khớp với điều kiện
+            + right join : RIGHT [OUTER] JOIN : toàn bộ bảng 2
+            + full : FULL [OUTER] JOIN  : cả hai bảng 
+            -> không có thì là Null
+
+
+    +LAG ( expression [, offset [, default] ] ) OVER ( [ query_partition_clause ] order_by_clause ) : lấy dòng trước đó
+        +expression : tên cột , hoặc các biểu thức trả về một giá trị
+        +offset: bước nhảy
+        + default
+        + query_partition_clause : PARTITION BY ? : chia thành các nhóm 
+        + order_by_clause : ORDER BY ? : xác định thứ tự trong mỗi phân vùng
+            + sắp xếp trước ->lấy bản ghi trước đó
+        +Lead : Lấy dòng sau
+
+    +Case
+        + Simple case:so sánh một biểu thức với một bộ các biểu thức đơn giản để xác định kết quả.
+            + CASE bieuthuc_dauvao
+                WHEN bieuthuc_1 THEN ketqua_1
+                WHEN bieuthuc_2 THEN ketqua_2
+                ...
+                WHEN bieuthuc_n THEN ketqua_n
+                ELSE ketqua_khac
+                END
+        + Searched case :đánh giá một bộ các biểu thức Boolean để xác định kết quả.
+                +CASE
+                WHEN dieukien_1 THEN ketqua_1
+                WHEN dieukien_2 THEN ketqua_2
+                ...
+                WHEN dieukien_n THEN ketqua_n
+                ELSE ketqua_khac
+                END
 
     +Có thể sử dụng trong order by và group by
 
