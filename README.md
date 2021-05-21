@@ -33,7 +33,7 @@
         + default: mặc định nếu khôn được cung cấp
         + initial : truyền trước một giá trị nào đó trong html
         + trong ModelSerializers ,nếu muốn thêm các tuỳ chọn cho trường  :
-            + extra_kwargs = {
+        + extra_kwargs = {
             'fields_name': {
                 'write_only,...': True
             }
@@ -72,21 +72,21 @@
 
     + Sql:
         Join: Select From table1 (join) table2 on ?
-            + inner: INNER JOIN : chung của hai bảng
-            + left join: LEFT [OUTER] JOIN : toàn bộ bảng 1 và một phần bảng 2 khớp với điều kiện
-            + right join : RIGHT [OUTER] JOIN : toàn bộ bảng 2
-            + full : FULL [OUTER] JOIN  : cả hai bảng 
-            -> không có thì là Null
+            	+ inner: INNER JOIN : chung của hai bảng
+            	+ left join: LEFT [OUTER] JOIN : toàn bộ bảng 1 và một phần bảng 2 khớp với điều kiện
+           	+ right join : RIGHT [OUTER] JOIN : toàn bộ bảng 2
+            	+ full : FULL [OUTER] JOIN  : cả hai bảng 
+            	-> không có thì là Null
 
 
     + LAG ( expression [, offset [, default] ] ) OVER ( [ query_partition_clause ] order_by_clause ) : lấy dòng trước đó
-        +expression : tên cột , hoặc các biểu thức trả về một giá trị
-        +offset: bước nhảy
-        + default
-        + query_partition_clause : PARTITION BY ? : chia thành các nhóm 
-        + order_by_clause : ORDER BY ? : xác định thứ tự trong mỗi phân vùng
-        + sắp xếp trước ->lấy bản ghi trước đó
-        +Lead : Lấy dòng sau
+        	+ expression : tên cột , hoặc các biểu thức trả về một giá trị
+        	+ offset: bước nhảy
+        	+ default
+        	+ query_partition_clause : PARTITION BY ? : chia thành các nhóm 
+        	+ order_by_clause : ORDER BY ? : xác định thứ tự trong mỗi phân vùng
+        	+ sắp xếp trước ->lấy bản ghi trước đó
+        	+Lead : Lấy dòng sau
 
     + Case
         + Simple case:so sánh một biểu thức với một bộ các biểu thức đơn giản để xác định kết quả.
