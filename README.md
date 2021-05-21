@@ -14,17 +14,17 @@
     + có phần giống với form
     + get,post: lấy toàn bộ(get) và thêm(post)
     + get,delete,put+id: lấy một đối tượng cụ thể(get),xoá đối tượng(delete),cập nhật đối tượng(put)
-        +put: Model(object cũ,data mới) -> save()
-    +data:
+    + put: Model(object cũ,data mới) -> save()
+    + data:
         + query->json: data=Serializers(query,many=True(nếu có nhiều object))-> data.data
         + json->model : data=Serializers(data=request.data) -> data.data['key']
-    +is_valid(raise_exception=True): thông báo lỗi cho từng trường 
-    +validation:
-        +validate_name: một trường cụ thể
-            +Nếu  <field_name>được khai báo trên bộ tuần tự với required=False thì bước xác thực này sẽ không diễn ra nếu trường không được bao gồm,nếu muốn (validators=[validate_name])
+    	+ is_valid(raise_exception=True): thông báo lỗi cho từng trường 
+    	+ validation:
+        + validate_name: một trường cụ thể
+        + Nếu  <field_name>được khai báo trên bộ tuần tự với required=False thì bước xác thực này sẽ không diễn ra nếu trường không được bao gồm,nếu 			muốn(validators=[validate_name])
         + validate : các trường với nhau
-    +depth:đối số độ sâu
-    +Các tuỳ  chọn field:
+    	+ depth:đối số độ sâu
+    + Các tuỳ  chọn field:
         + read_only: chỉ đọc ,mặc định là False
         + write_only : chỉ ghi ,không hiển thị khi biểu diễn mặc địng là False
         + required : cho phép trống hay không :mặc định là True *
@@ -33,7 +33,7 @@
         + default: mặc định nếu khôn được cung cấp
         + initial : truyền trước một giá trị nào đó trong html
         + trong ModelSerializers ,nếu muốn thêm các tuỳ chọn cho trường  :
-            +extra_kwargs = {
+            + extra_kwargs = {
             'fields_name': {
                 'write_only,...': True
             }
