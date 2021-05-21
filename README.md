@@ -59,14 +59,14 @@
 
    + View:
      GenericViewset: có sẵn các hàm 
-         + queryset
-         + serializer_class
+        + queryset
+        + serializer_class
      ModelViewset: 
-         + kế thừa từ các lớp mixin và GenericViewset do đó cũng phải cung cấp thêm hai biến trên
-         + create(), retrieve(), update()_cập nhật tất cả,partial_update()_cập nhật một phần, destroy(), list()
+        + kế thừa từ các lớp mixin và GenericViewset do đó cũng phải cung cấp thêm hai biến trên
+        + create(), retrieve(), update()_cập nhật tất cả,partial_update()_cập nhật một phần, destroy(), list()
 
    + Router:
-         + router.register() -> include(router.url)
+        + router.register() -> include(router.url)
 
 
 
