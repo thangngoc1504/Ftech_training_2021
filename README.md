@@ -59,24 +59,24 @@
 
    + View:
         GenericViewset: có sẵn các hàm 
-            + queryset
-            + serializer_class
+         + queryset
+         + serializer_class
         ModelViewset: 
-            + kế thừa từ các lớp mixin và GenericViewset do đó cũng phải cung cấp thêm hai biến trên
-            + create(), retrieve(), update()_cập nhật tất cả,partial_update()_cập nhật một phần, destroy(), list()
+         + kế thừa từ các lớp mixin và GenericViewset do đó cũng phải cung cấp thêm hai biến trên
+         + create(), retrieve(), update()_cập nhật tất cả,partial_update()_cập nhật một phần, destroy(), list()
 
         Router:
-            router.register() -> include(router.url)
+            + router.register() -> include(router.url)
 
 
 
    + Sql:
-        Join: Select From table1 (join) table2 on ?
-            + inner: INNER JOIN : chung của hai bảng
-            + left join: LEFT [OUTER] JOIN : toàn bộ bảng 1 và một phần bảng 2 khớp với điều kiện
-            + right join : RIGHT [OUTER] JOIN : toàn bộ bảng 2
-            + full : FULL [OUTER] JOIN  : cả hai bảng 
-            -> không có thì là Null
+    Join: Select From table1 (join) table2 on ?
+        + inner: INNER JOIN : chung của hai bảng
+        + left join: LEFT [OUTER] JOIN : toàn bộ bảng 1 và một phần bảng 2 khớp với điều kiện
+        + right join : RIGHT [OUTER] JOIN : toàn bộ bảng 2
+        + full : FULL [OUTER] JOIN  : cả hai bảng 
+        -> không có thì là Null
 
 
    + LAG ( expression [, offset [, default] ] ) OVER ( [ query_partition_clause ] order_by_clause ) : lấy dòng trước đó
