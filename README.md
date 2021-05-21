@@ -90,7 +90,7 @@
 
     + Case
         + Simple case:so sánh một biểu thức với một bộ các biểu thức đơn giản để xác định kết quả.
-            + CASE bieuthuc_dauvao
+        + CASE bieuthuc_dauvao
                 WHEN bieuthuc_1 THEN ketqua_1
                 WHEN bieuthuc_2 THEN ketqua_2
                 ...
