@@ -57,7 +57,7 @@
         + last_page_strings: Một danh sách hoặc nhiều giá trị chuỗi cho biết các giá trị có thể được sử dụng với page_query_param để yêu cầu trang cuối cùng trong tập hợp. Mặc định là('last',)
         + template: Tên của mẫu để sử dụng khi hiển thị các điều khiển phân trang trong API có thể duyệt. Có thể được ghi đè để sửa đổi kiểu kết xuất hoặc đặt thành None tắt hoàn toàn các điều khiển phân trang HTML. Mặc định là "rest_framework/pagination/numbers.html".
 
-    + View:
+   + View:
         GenericViewset: có sẵn các hàm 
             + queryset
             + serializer_class
@@ -70,7 +70,7 @@
 
 
 
-    + Sql:
+   + Sql:
         Join: Select From table1 (join) table2 on ?
             	+ inner: INNER JOIN : chung của hai bảng
             	+ left join: LEFT [OUTER] JOIN : toàn bộ bảng 1 và một phần bảng 2 khớp với điều kiện
@@ -79,7 +79,7 @@
             	-> không có thì là Null
 
 
-    + LAG ( expression [, offset [, default] ] ) OVER ( [ query_partition_clause ] order_by_clause ) : lấy dòng trước đó
+   + LAG ( expression [, offset [, default] ] ) OVER ( [ query_partition_clause ] order_by_clause ) : lấy dòng trước đó
         	+ expression : tên cột , hoặc các biểu thức trả về một giá trị
         	+ offset: bước nhảy
         	+ default
@@ -88,7 +88,7 @@
         	+ sắp xếp trước ->lấy bản ghi trước đó
         	+Lead : Lấy dòng sau
 
-    + Case
+   + Case
         + Simple case:so sánh một biểu thức với một bộ các biểu thức đơn giản để xác định kết quả.
         + CASE bieuthuc_dauvao
                 WHEN bieuthuc_1 THEN ketqua_1
@@ -106,11 +106,11 @@
                 ELSE ketqua_khac
                 END
 
-    + Có thể sử dụng trong order by và group by
+   + Có thể sử dụng trong order by và group by
 
 
 
-    + Swagger:
+   + Swagger:
     + https://swagger.io/
     + https://swagger.io/tools/swagger-codegen/
     + https://spago.ftech.ai/swagger/
